@@ -1,31 +1,795 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Science ePortfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Karen Connors' CS 499 Computer Science Capstone ePortfolio at Southern New Hampshire University.">
+  <title>Karen Connors | Computer Science ePortfolio</title>
+
+  <style>
+    :root {
+      --navy: #152a43;
+      --navy-light: #244563;
+      --blue: #24648b;
+      --background: #f4f6f9;
+      --white: #ffffff;
+      --text: #253346;
+      --muted: #536477;
+      --border: #dce3ea;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    a {
+      color: #175a86;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #c38319;
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 12px;
+      background: white;
+      padding: 10px 16px;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 65px 0 60px;
+    }
+
+    .eyebrow {
+      color: #bdd7ed;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.2;
+      margin: 14px 0;
+    }
+
+    .hero .subtitle {
+      font-size: 21px;
+      color: #e4eef6;
+    }
+
+    .hero p {
+      max-width: 780px;
+    }
+
+    .navigation {
+      background: var(--navy-light);
+      padding: 15px 0;
+    }
+
+    .navigation .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+    }
+
+    .navigation a {
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .navigation a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding-top: 36px;
+      padding-bottom: 60px;
+    }
+
+    .section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px;
+      margin-bottom: 26px;
+      box-shadow: 0 3px 12px rgba(20, 42, 67, 0.04);
+    }
+
+    h2 {
+      font-size: 28px;
+      color: var(--navy);
+      margin-top: 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h3 {
+      font-size: 21px;
+      color: var(--blue);
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .section p {
+      text-align: left;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: bold;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 23px;
+    }
+
+    .project-card h3 {
+      margin-top: 8px;
+    }
+
+    .note {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .outcomes li {
+      padding-bottom: 12px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 42px 0;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Computer Science ePortfolio</h1>
-    <h2>CS 499 – Computer Science Capstone</h2>
 
-    <p>
-        Welcome to my computer science ePortfolio.
-        I am pursuing a Bachelor of Science in Computer Science
-        with a concentration in Software Engineering at
-        Southern New Hampshire University.
-    </p>
+  <a class="skip-link" href="#main">
+    Skip to main content
+  </a>
 
-    <p>
-        My professional interests include software quality assurance,
-        troubleshooting, software testing, and secure software development.
-    </p>
+  <header class="hero">
+    <div class="container">
 
-    <h2>Portfolio Enhancements</h2>
-    <p>
-        This portfolio will showcase enhancements in software engineering
-        and design, algorithms and data structures, and databases.
-    </p>
+      <div class="eyebrow">
+        Southern New Hampshire University | CS 499
+      </div>
+
+      <h1>Karen Connors</h1>
+
+      <p class="subtitle">
+        Computer Science ePortfolio
+      </p>
+
+      <p>
+        Bachelor of Science in Computer Science
+        <br>
+        Concentration in Software Engineering
+      </p>
+
+      <p>
+        Software Quality Assurance |
+        Software Testing |
+        Troubleshooting |
+        Cybersecurity |
+        Secure Software Development
+      </p>
+
+    </div>
+  </header>
+
+  <nav class="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#self-assessment">Professional Self-Assessment</a>
+      <a href="#code-review">Code Review</a>
+      <a href="#enhancements">Portfolio Enhancements</a>
+      <a href="#course-outcomes">Course Outcomes</a>
+    </div>
+  </nav>
+
+  <main id="main" class="container">
+
+    <!-- COMPLETE PROFESSIONAL SELF-ASSESSMENT -->
+
+    <section id="self-assessment" class="section">
+
+      <div class="section-label">
+        Professional Introduction
+      </div>
+
+      <h2>Professional Self-Assessment</h2>
+
+      <h3>Professional Growth and Career Goals</h3>
+
+      <p>
+        I began my academic journey at Southern New Hampshire
+        University (SNHU) in May 2022, pursuing a Bachelor of
+        Science in Computer Science with a concentration in
+        Software Engineering. With graduation approaching in
+        December 2026, I have expanded my knowledge,
+        strengthened my technical abilities, and clarified
+        my career interests. My coursework and projects have
+        provided experience with programming, software
+        development processes, data structures and algorithms,
+        database systems, software testing, and secure coding.
+        I have learned that effective software development
+        involves more than writing code that works. It
+        requires understanding stakeholder needs, evaluating
+        design options, recognizing possible vulnerabilities,
+        testing thoroughly, and building applications that
+        are dependable and easy to maintain. These experiences
+        have shaped my interests in software quality assurance,
+        testing, troubleshooting, cybersecurity, and software
+        engineering.
+      </p>
+
+      <p>
+        Completing my CS 499 capstone and creating a
+        professional electronic portfolio (ePortfolio)
+        enabled me to reflect on my academic achievements
+        and illustrate the development of my skills throughout
+        the program. By reassessing projects from earlier
+        coursework, recognizing their limitations, and
+        implementing significant improvements, I enhanced
+        my capacity to evaluate existing software and formulate
+        practical solutions. This experience further strengthened
+        my interest in identifying software defects, examining
+        their root causes, and advancing software quality before
+        issues adversely affect users. My professional principles
+        include accountability, technical rigor, ethical judgment,
+        lifelong learning, and responsible software development.
+        After graduation, I plan to pursue a career in software
+        quality assurance, software testing, or a related area
+        of software engineering and cybersecurity, while
+        continuing to develop my technical expertise.
+      </p>
+
+      <h3>Collaboration and Communication in Computer Science</h3>
+
+      <p>
+        A central lesson from my Computer Science studies is
+        that successful software development relies on effective
+        communication, collaboration, and a thorough understanding
+        of organizational requirements. My coursework introduced
+        me to Agile principles, Scrum methodologies, and the
+        software development life cycle, all of which underscore
+        the importance of collaboration among developers, testers,
+        project managers, and stakeholders throughout the process.
+        I learned that clear communication and ongoing feedback
+        enable teams to clarify expectations, identify challenges,
+        respond to evolving requirements, and deliver software
+        aligned with organizational objectives. This understanding
+        has deepened my appreciation of how technical decisions
+        relate to the needs of those who rely on software
+        applications.
+      </p>
+
+      <p>
+        While I carried out the capstone enhancements on my own,
+        I followed collaborative practices by taking into account
+        the perspectives of software developers, end users, and
+        organizational decision-makers. I considered how the
+        proposed changes could affect the application's
+        functionality, reliability, ease of use, and maintainability.
+        I also recorded the technical choices I made and the
+        testing methods I used so another developer could understand
+        the changes and replicate the results. My earlier coursework
+        in Agile and Scrum further highlighted the importance of
+        thoughtful code reviews, clear role definitions, and
+        incorporating feedback throughout development. Together,
+        these experiences have equipped me to contribute in
+        collaborative settings and make technical decisions
+        grounded in evidence, fulfilling Course Outcome 1.
+      </p>
+
+      <p>
+        Professional communication has played a vital role
+        in my technical growth. Throughout the program,
+        I developed an understanding of how programmers must
+        convey technical concepts clearly to audiences with
+        varying levels of expertise. Developers often need
+        detailed information about algorithms, source code,
+        and system constraints, whereas organizational stakeholders
+        may focus on a solution's impact on security, reliability,
+        efficiency, and business operations. My CS 499 code-review
+        presentation allowed me to describe existing application
+        features, pinpoint areas for improvement, and outline
+        planned enhancements. Creating README files, technical
+        documentation, enhancement narratives, and my professional
+        ePortfolio also helped me strengthen my written and visual
+        communication skills. These experiences reflect my progress
+        toward Course Outcome 2 by demonstrating my ability to
+        organize technical content and present it accurately,
+        coherently, and professionally.
+      </p>
+
+      <h3>Technical Knowledge and Problem-Solving Skills</h3>
+
+      <p>
+        My studies in data structures and algorithms improved my
+        ability to assess computing challenges and choose solutions
+        that meet performance, reliability, and functional needs.
+        I learned about structures including vectors, hash tables,
+        trees, and graphs, and how to assess the time and space
+        complexity of algorithms. In CS 300, I examined vectors,
+        hash tables, and binary search trees to understand how
+        each affects data storage, lookup, and processing. This
+        work showed me that choosing a suitable structure depends
+        on factors such as memory use, computational cost, and
+        the specific problem. It also emphasized how Big O notation
+        helps measure algorithmic efficiency and describe expected
+        performance.
+      </p>
+
+      <p>
+        My software engineering coursework taught me to take
+        a structured approach to developing applications.
+        I learned to interpret requirements, plan program
+        features, spot possible defects, and assess software
+        through testing and debugging. I came to understand
+        that a program running successfully does not, on its
+        own, prove that it is reliable; quality also depends
+        on how it handles invalid inputs, unexpected situations,
+        and failed operations. These experiences deepened my
+        interest in quality assurance and troubleshooting,
+        where I can investigate software behavior, trace
+        issues to their causes, and strengthen system reliability.
+        Through assignments and technical projects, I practiced
+        reviewing source code, making improvements, and recording
+        test outcomes. Together, these experiences reflect my
+        growing ability to use software engineering principles
+        to address practical problems.
+      </p>
+
+      <p>
+        My computer science studies broadened my understanding
+        of database architecture and information management.
+        I worked with Python and MongoDB, practiced writing
+        database queries, and implemented create, read, update,
+        and delete (CRUD) operations. These experiences showed
+        me how databases underpin larger applications and how
+        choices related to indexing, filtering, validation, and
+        data retrieval influence system efficiency and dependability.
+        I also learned that successful database design involves
+        balancing performance, ease of maintenance, data integrity,
+        and the needs of the application. Together, my coursework
+        in algorithms, software engineering, and databases reflects
+        my ability to develop and assess computing solutions while
+        weighing technical trade-offs. This work aligns with Course
+        Outcome 3, algorithmic problem-solving, and Course Outcome
+        4, using computing methods, tools, and practices to build
+        effective software solutions.
+      </p>
+
+      <h3>Security Awareness and Quality Assurance</h3>
+
+      <p>
+        Cultivating a security-focused approach to software
+        engineering has been a significant component of my academic
+        development. My coursework demonstrated how software
+        vulnerabilities may arise from inadequate input validation,
+        insecure credential storage, weak authorization mechanisms,
+        improper error handling, and flaws in application design.
+        CS 410, Software Reverse Engineering, offered a practical
+        setting in which to examine these risks. During a security
+        assessment of an investment management application, I
+        identified potential issues related to fixed-size character
+        arrays, hardcoded passwords, incomplete authentication,
+        unrestricted login attempts, inadequate input validation,
+        missing authorization controls, and absent audit logging.
+        Recording these findings and proposing remediation measures
+        deepened my understanding of how security weaknesses can
+        compromise confidentiality and integrity, as well as
+        application reliability.
+      </p>
+
+      <p>
+        These experiences also underscored the close connection
+        between cybersecurity, software testing, and quality
+        assurance. Software may function correctly under ordinary
+        conditions yet remain susceptible to unexpected inputs,
+        unauthorized access, or failed operations. I therefore
+        learned that thorough testing must evaluate both intended
+        functionality and potential failure scenarios. This
+        perspective has shaped my approach to troubleshooting
+        and maintaining existing software. I now prioritize
+        defensive programming, rigorous validation, meaningful
+        test cases, and the early identification of weaknesses
+        before they can adversely affect users. These practices
+        support Course Outcome 5: cultivating a security mindset
+        that anticipates vulnerabilities, addresses design flaws,
+        and safeguards information and computing resources.
+      </p>
+
+      <h3>Capstone Accomplishments and ePortfolio Overview</h3>
+
+      <p>
+        My CS 499 ePortfolio comprises three enhanced artifacts
+        that collectively document my development in software
+        design and engineering, algorithms and data structures,
+        and database systems. Each artifact was adapted from
+        prior SNHU coursework and selected for its potential
+        to support substantive technical refinement. Enhancing
+        these projects involved examining existing functionality,
+        identifying design constraints, implementing improvements,
+        validating outcomes through testing, and documenting
+        the work. Collectively, the artifacts demonstrate my
+        ability to apply computer science concepts to practical
+        challenges, along with professional communication,
+        informed technical judgment, and a sustained commitment
+        to software reliability.
+      </p>
+
+      <p>
+        The first artifact, the SNHU Investments Client
+        Management Application, was developed originally for
+        CS 410: Software Reverse Engineering and addresses the
+        Software Design and Engineering category. I revised
+        the C++ application by organizing client information
+        into structured records, extending client-management
+        capabilities, strengthening authentication and input
+        validation, adding persistent data storage, and
+        incorporating an audit history. These enhancements
+        demonstrate my ability to improve an application's
+        functionality, maintainability, reliability, and
+        security while considering how design decisions
+        affect system behavior and data integrity.
+      </p>
+
+      <p>
+        The second artifact, the Course Planner Application,
+        originated in CS 300: Data Structures and Algorithms
+        and corresponds to the Algorithms and Data Structures
+        category. I extended the application by implementing
+        a directed graph and depth-first search (DFS) to
+        evaluate course prerequisites. The revised system
+        identifies missing prerequisite references, detects
+        circular dependencies, and generates prerequisite-first
+        course sequences. I also assessed algorithmic complexity
+        and documented nine test scenarios. This work demonstrates
+        my ability to apply algorithmic concepts, assess data
+        structure suitability, and build computational solutions
+        to practical problems.
+      </p>
+
+      <p>
+        The third artifact, the Grazioso Salvare Animal Rescue
+        Dashboard, originated in CS 340: Client/Server Development
+        and represents the Databases category. I enhanced its
+        Python and MongoDB capabilities by introducing database-side
+        filtering by rescue category, strengthening CRUD validation,
+        improving credential management, and assessing compound
+        indexing. Tests using a synthetic dataset containing
+        10,000 records indicated reductions of approximately
+        79.39% to 97.08% in the number of documents examined by
+        the evaluated indexed queries, relative to collection scans.
+        Additionally, all eight automated Python unit tests passed.
+        These findings demonstrate my ability to assess database
+        operations through quantifiable evidence while acknowledging
+        the constraints of performance measurements.
+      </p>
+
+      <p>
+        Taken together, the artifacts reflect complementary
+        dimensions of my technical development. The investment
+        application highlights software engineering, reliability,
+        and security-oriented design; the Course Planner demonstrates
+        algorithmic reasoning, graph traversal, and problem-solving;
+        and the animal rescue dashboard showcases database development,
+        query assessment, and application integration. In conjunction
+        with my code-review presentation, supporting documentation,
+        and professional narratives, these projects provide evidence
+        of my progress toward the five CS 499 course outcomes.
+        The ePortfolio further demonstrates my ability to organize
+        and present technical work in an accessible, professional
+        format for prospective employers and other audiences.
+      </p>
+
+      <h3>Professional Readiness and Future Development</h3>
+
+      <p>
+        As I approach completion of my Bachelor of Science in
+        Computer Science and finalize my CS 499 ePortfolio,
+        I have developed a deeper understanding of the expertise,
+        capabilities, and professional responsibilities required
+        in the field. I have learned to assess software methodically,
+        recognize areas for improvement, implement changes,
+        and confirm that they work as intended. These experiences
+        have also underscored the value of teamwork, clear
+        stakeholder communication, sound algorithmic thinking,
+        secure design, and thorough testing. They have further
+        helped me identify the areas of computer science that
+        best match my abilities and career interests.
+      </p>
+
+      <p>
+        As I begin my career, I plan to pursue roles in software
+        quality assurance, software testing, troubleshooting,
+        cybersecurity, and secure software engineering. I am
+        especially drawn to positions that involve assessing
+        software functionality, investigating defects, analyzing
+        vulnerabilities, and developing reliable applications.
+        Because programming methods, cybersecurity threats,
+        and software technologies continue to change, I recognize
+        the need for ongoing professional growth. Further education,
+        industry certifications, and hands-on experience will help
+        me expand my expertise and contribute effectively to
+        collaborative development teams.
+      </p>
+
+      <p>
+        My professional ePortfolio is more than a compilation
+        of coursework; it reflects my growth from learning core
+        programming concepts to assessing and enhancing existing
+        applications using advanced software engineering practices.
+        The improvements I completed demonstrate my ability to
+        address technical challenges, explain decisions, perform
+        effective testing, and consider quality and security
+        throughout the development process. My attention to detail,
+        dedication to ongoing improvement, and curiosity about how
+        systems operate will support my success as a computer
+        science professional. Together, these achievements have
+        equipped me to pursue my career objectives with a solid
+        technical foundation and a commitment to developing
+        responsible, dependable software.
+      </p>
+
+    </section>
+
+    <!-- CODE REVIEW -->
+
+    <section id="code-review" class="section">
+      <div class="section-label">Code Review Presentation</div>
+      <h2>CS 499 Code Review</h2>
+
+      <p>
+        My code-review presentation examines the existing
+        functionality of selected software, identifies
+        opportunities for improvement, and explains planned
+        enhancements involving program structure, validation,
+        security, testing, and documentation.
+      </p>
+
+      <p>
+        The code review supports professional communication,
+        software analysis, and security-conscious development.
+      </p>
+
+      <p class="note">
+        Video link will be added after public hosting is verified.
+      </p>
+    </section>
+
+    <!-- ENHANCEMENT PROJECTS -->
+
+    <section id="enhancements" class="section">
+      <div class="section-label">Technical Portfolio</div>
+      <h2>Software Enhancement Projects</h2>
+
+      <p>
+        The following three projects represent my work across
+        the required CS 499 enhancement categories.
+        Each project will provide the original source code,
+        enhanced implementation, supporting technical files,
+        README documentation, and professional narrative.
+      </p>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="section-label">Enhancement One</div>
+          <h3>Software Design and Engineering</h3>
+
+          <p>
+            <strong>
+              SNHU Investments Client Management Application
+            </strong>
+          </p>
+
+          <p>
+            Enhanced C++ client management through structured
+            records, validation, authentication safeguards,
+            persistent storage, and audit logging.
+          </p>
+
+          <p class="note">
+            CS 410: Software Reverse Engineering
+          </p>
+
+          <p class="note">
+            Original code, enhanced code, and narrative
+            will be linked after upload.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="section-label">Enhancement Two</div>
+          <h3>Algorithms and Data Structures</h3>
+
+          <p>
+            <strong>Course Planner Application</strong>
+          </p>
+
+          <p>
+            Enhanced C++ application using a directed
+            prerequisite graph and depth-first search
+            for dependency analysis, cycle detection,
+            and prerequisite-first sequencing.
+          </p>
+
+          <p class="note">
+            CS 300: Data Structures and Algorithms
+          </p>
+
+          <p class="note">
+            Original code, enhanced code, test CSV
+            files, and narrative will be linked after upload.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="section-label">Enhancement Three</div>
+          <h3>Databases</h3>
+
+          <p>
+            <strong>
+              Grazioso Salvare Animal Rescue Dashboard
+            </strong>
+          </p>
+
+          <p>
+            Enhanced Python and MongoDB integration,
+            validated CRUD operations, database-side
+            filtering, and compound-index evaluation.
+          </p>
+
+          <p class="note">
+            CS 340: Client/Server Development
+          </p>
+
+          <p class="note">
+            Original and enhanced database files,
+            dashboard, testing evidence, and narrative
+            will be linked after upload.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- COURSE OUTCOMES -->
+
+    <section id="course-outcomes" class="section">
+
+      <div class="section-label">Academic Competencies</div>
+      <h2>CS 499 Course Outcomes</h2>
+
+      <p>
+        The projects, code review, documentation, and
+        professional self-assessment collectively provide
+        evidence of the five CS 499 learning outcomes.
+      </p>
+
+      <ol class="outcomes">
+        <li>
+          <strong>Collaboration and Decision-Making:</strong>
+          Employ strategies that support collaborative
+          environments and organizational decisions.
+        </li>
+
+        <li>
+          <strong>Professional Communication:</strong>
+          Develop coherent and technically sound oral,
+          written, and visual communications.
+        </li>
+
+        <li>
+          <strong>Algorithms and Problem-Solving:</strong>
+          Evaluate computing solutions using algorithmic
+          principles, efficiency analysis, and design
+          trade-offs.
+        </li>
+
+        <li>
+          <strong>Computing Practices:</strong>
+          Apply computing techniques, programming skills,
+          and tools to create effective solutions.
+        </li>
+
+        <li>
+          <strong>Security Mindset:</strong>
+          Identify vulnerabilities, mitigate design
+          weaknesses, and safeguard data and resources.
+        </li>
+      </ol>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Karen Connors |
+        CS 499 Computer Science Capstone |
+        Southern New Hampshire University
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
-
