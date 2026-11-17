@@ -1,0 +1,4 @@
+
+CSCI100,Introduction to Computer Science
+CSCI200,Data Structures,CSCI100
+CSCI300,Introduction to Algorithms,CSCI200,CSCI999
