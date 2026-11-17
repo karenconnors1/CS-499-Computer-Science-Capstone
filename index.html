@@ -19,13 +19,8 @@
       --border: #dce3ea;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -43,10 +38,7 @@
       padding-right: 24px;
     }
 
-    a {
-      color: #175a86;
-    }
-
+    a { color: #175a86; }
     a:focus-visible {
       outline: 3px solid #c38319;
       outline-offset: 4px;
@@ -60,9 +52,7 @@
       padding: 10px 16px;
     }
 
-    .skip-link:focus {
-      top: 12px;
-    }
+    .skip-link:focus { top: 12px; }
 
     .hero {
       background: var(--navy);
@@ -90,9 +80,7 @@
       color: #e4eef6;
     }
 
-    .hero p {
-      max-width: 780px;
-    }
+    .hero p { max-width: 780px; }
 
     .navigation {
       background: var(--navy-light);
@@ -112,9 +100,7 @@
       text-decoration: none;
     }
 
-    .navigation a:hover {
-      text-decoration: underline;
-    }
+    .navigation a:hover { text-decoration: underline; }
 
     main {
       padding-top: 36px;
@@ -145,13 +131,8 @@
       margin-bottom: 10px;
     }
 
-    p {
-      margin: 0 0 18px;
-    }
-
-    .section p {
-      text-align: left;
-    }
+    p { margin: 0 0 18px; }
+    .section p { text-align: left; }
 
     .section-label {
       font-size: 13px;
@@ -175,18 +156,14 @@
       padding: 23px;
     }
 
-    .project-card h3 {
-      margin-top: 8px;
-    }
+    .project-card h3 { margin-top: 8px; }
 
     .note {
       font-size: 14px;
       color: var(--muted);
     }
 
-    .outcomes li {
-      padding-bottom: 12px;
-    }
+    .outcomes li { padding-bottom: 12px; }
 
     footer {
       background: var(--navy);
@@ -196,44 +173,28 @@
       font-size: 14px;
     }
 
-    footer p {
-      margin-bottom: 0;
-    }
+    footer p { margin-bottom: 0; }
 
     @media (max-width: 650px) {
-      .hero {
-        padding: 42px 0;
-      }
-
-      .section {
-        padding: 22px;
-      }
-
-      h2 {
-        font-size: 24px;
-      }
+      .hero { padding: 42px 0; }
+      .section { padding: 22px; }
+      h2 { font-size: 24px; }
     }
   </style>
 </head>
 
 <body>
-
-  <a class="skip-link" href="#main">
-    Skip to main content
-  </a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="hero">
     <div class="container">
-
       <div class="eyebrow">
         Southern New Hampshire University | CS 499
       </div>
 
       <h1>Karen Connors</h1>
 
-      <p class="subtitle">
-        Computer Science ePortfolio
-      </p>
+      <p class="subtitle">Computer Science ePortfolio</p>
 
       <p>
         Bachelor of Science in Computer Science
@@ -242,13 +203,10 @@
       </p>
 
       <p>
-        Software Quality Assurance |
-        Software Testing |
-        Troubleshooting |
-        Cybersecurity |
+        Software Quality Assurance | Software Testing |
+        Troubleshooting | Cybersecurity |
         Secure Software Development
       </p>
-
     </div>
   </header>
 
@@ -266,11 +224,7 @@
     <!-- COMPLETE PROFESSIONAL SELF-ASSESSMENT -->
 
     <section id="self-assessment" class="section">
-
-      <div class="section-label">
-        Professional Introduction
-      </div>
-
+      <div class="section-label">Professional Introduction</div>
       <h2>Professional Self-Assessment</h2>
 
       <h3>Professional Growth and Career Goals</h3>
@@ -607,7 +561,6 @@
         technical foundation and a commitment to developing
         responsible, dependable software.
       </p>
-
     </section>
 
     <!-- CODE REVIEW -->
@@ -643,7 +596,6 @@
         Video presentation | Duration: 39 minutes, 29 seconds |
         Hosted on YouTube (Unlisted)
       </p>
-
     </section>
 
     <!-- ENHANCEMENT PROJECTS -->
@@ -661,6 +613,8 @@
       </p>
 
       <div class="project-grid">
+
+        <!-- ENHANCEMENT ONE -->
 
         <article class="project-card">
           <div class="section-label">Enhancement One</div>
@@ -682,11 +636,38 @@
             CS 410: Software Reverse Engineering
           </p>
 
-          <p class="note">
-            Original code, enhanced code, and narrative
-            will be linked after upload.
+          <p>
+            <a href="https://github.com/karenconnors1/CS-499-Computer-Science-Capstone/tree/main/enhancement-one">
+              View Enhancement One Project Files on GitHub
+            </a>
+          </p>
+
+          <p>
+            <a href="https://github.com/karenconnors1/CS-499-Computer-Science-Capstone/blob/main/enhancement-one/Project2.cpp">
+              View Original C++ Source Code
+            </a>
+          </p>
+
+          <p>
+            <a href="https://github.com/karenconnors1/CS-499-Computer-Science-Capstone/blob/main/enhancement-one/Project2_Enhanced.cpp">
+              View Enhanced C++ Source Code
+            </a>
+          </p>
+
+          <p>
+            <a href="https://github.com/karenconnors1/CS-499-Computer-Science-Capstone/blob/main/enhancement-one/README.md">
+              Read Project Documentation
+            </a>
+          </p>
+
+          <p>
+            <a href="enhancement-one/Enhancement_One_Narrative.docx">
+              Download Enhancement One Narrative
+            </a>
           </p>
         </article>
+
+        <!-- ENHANCEMENT TWO -->
 
         <article class="project-card">
           <div class="section-label">Enhancement Two</div>
@@ -712,6 +693,8 @@
             files, and narrative will be linked after upload.
           </p>
         </article>
+
+        <!-- ENHANCEMENT THREE -->
 
         <article class="project-card">
           <div class="section-label">Enhancement Three</div>
@@ -746,7 +729,6 @@
     <!-- COURSE OUTCOMES -->
 
     <section id="course-outcomes" class="section">
-
       <div class="section-label">Academic Competencies</div>
       <h2>CS 499 Course Outcomes</h2>
 
@@ -788,7 +770,6 @@
           weaknesses, and safeguard data and resources.
         </li>
       </ol>
-
     </section>
 
   </main>
