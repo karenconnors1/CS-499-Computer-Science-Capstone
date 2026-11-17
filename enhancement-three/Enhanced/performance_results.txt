@@ -1,0 +1,187 @@
+CS 499 Database Performance Evaluation
+Dataset: Local synthetic animal records
+
+MongoDB connection established.
+Database: CS499_AnimalRescue_Performance
+Collection: animals
+Documents: 10000
+
+Current indexes: ['_id_', 'rescue_filter_compound_idx']
+
+============================================================
+RESCUE CATEGORY: WATER
+============================================================
+
+Enhanced MongoDB query:
+{
+  "animal_type": "Dog",
+  "breed": {
+    "$in": [
+      "Labrador Retriever Mix",
+      "Chesapeake Bay Retriever",
+      "Newfoundland"
+    ]
+  },
+  "sex_upon_outcome": "Intact Female",
+  "age_upon_outcome_in_weeks": {
+    "$gte": 26,
+    "$lte": 156
+  }
+}
+
+Original full-collection retrieval:
+{
+  "documents_returned": 10000,
+  "execution_time_ms": 1,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - collection scan:
+{
+  "documents_returned": 292,
+  "execution_time_ms": 5,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - compound index:
+{
+  "documents_returned": 292,
+  "execution_time_ms": 0,
+  "documents_examined": 292,
+  "index_keys_examined": 297
+}
+
+Enhanced filtering - automatic selection:
+{
+  "documents_returned": 292,
+  "execution_time_ms": 0,
+  "documents_examined": 292,
+  "index_keys_examined": 297
+}
+
+Reduction in documents examined: 97.08%
+
+Result-count consistency: PASS
+
+============================================================
+RESCUE CATEGORY: MOUNTAIN
+============================================================
+
+Enhanced MongoDB query:
+{
+  "animal_type": "Dog",
+  "breed": {
+    "$in": [
+      "German Shepherd",
+      "Alaskan Malamute",
+      "Old English Sheepdog",
+      "Siberian Husky",
+      "Rottweiler"
+    ]
+  },
+  "sex_upon_outcome": "Intact Male",
+  "age_upon_outcome_in_weeks": {
+    "$gte": 26,
+    "$lte": 156
+  }
+}
+
+Original full-collection retrieval:
+{
+  "documents_returned": 10000,
+  "execution_time_ms": 1,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - collection scan:
+{
+  "documents_returned": 975,
+  "execution_time_ms": 5,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - compound index:
+{
+  "documents_returned": 975,
+  "execution_time_ms": 1,
+  "documents_examined": 975,
+  "index_keys_examined": 984
+}
+
+Enhanced filtering - automatic selection:
+{
+  "documents_returned": 975,
+  "execution_time_ms": 1,
+  "documents_examined": 975,
+  "index_keys_examined": 984
+}
+
+Reduction in documents examined: 90.25%
+
+Result-count consistency: PASS
+
+============================================================
+RESCUE CATEGORY: DISASTER
+============================================================
+
+Enhanced MongoDB query:
+{
+  "animal_type": "Dog",
+  "breed": {
+    "$in": [
+      "Doberman Pinscher",
+      "German Shepherd",
+      "Golden Retriever",
+      "Bloodhound",
+      "Rottweiler"
+    ]
+  },
+  "sex_upon_outcome": "Intact Male",
+  "age_upon_outcome_in_weeks": {
+    "$gte": 20,
+    "$lte": 300
+  }
+}
+
+Original full-collection retrieval:
+{
+  "documents_returned": 10000,
+  "execution_time_ms": 1,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - collection scan:
+{
+  "documents_returned": 2061,
+  "execution_time_ms": 6,
+  "documents_examined": 10000,
+  "index_keys_examined": 0
+}
+
+Enhanced filtering - compound index:
+{
+  "documents_returned": 2061,
+  "execution_time_ms": 2,
+  "documents_examined": 2061,
+  "index_keys_examined": 2070
+}
+
+Enhanced filtering - automatic selection:
+{
+  "documents_returned": 2061,
+  "execution_time_ms": 3,
+  "documents_examined": 2061,
+  "index_keys_examined": 2070
+}
+
+Reduction in documents examined: 79.39%
+
+Result-count consistency: PASS
+
+Evaluation completed successfully.
+Note: Query timings are individual MongoDB explain measurements, not dashboard response times.
